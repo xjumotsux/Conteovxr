@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<div id="welcome-screen">
+    <h1>Bienvenido</h1>
+    <p>Haz clic en el botón para entrar y activar la música.</p>
+    <button id="enter-site">Entrar</button>
+</div>
+
+<body>
+    <video autoplay loop muted class="background-video">
+        <source src="assets/fondo01.mp4" type="video/mp4">
+        Tu navegador no soporta videos en HTML5.
+    </video>
+
+    <audio id="background-music" autoplay loop>
+        <source src="assets/a7xS2.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <button id="music-toggle">II</button>
+
+    <nav>
+        <ul>
+            <li>INICIO</li>
+            <li>FOTOS</li>
+            <li>COMUNIDAD</li>
+            <li>FECHAS</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2>AVENGED SEVENFOLD EN VIVO POR EL ROCK</h2>
+        <p id="message">FALTA:</p>
+        <div id="countdown">
+            <div><span id="days">XX</span> DÍAS</div>
+            <div><span id="hours">XX</span> HORAS</div>
+            <div><span id="minutes">XX</span> MINUTOS</div>
+            <div><span id="seconds">XX</span> SEGUNDOS</div>
+        </div>
+        <div class="gif-container">
+            <img src="assets/Cosmic01.gif" alt="Animación" class="countdown-gif">
+        </div>
+    </div>
+    <footer>
+        <p class="disclaimer">
+            Este sitio web es un proyecto sin fines de lucro con el único propósito de entretenimiento y difusión del arte musical de Avenged Sevenfold. No se persigue ningún beneficio económico y no se busca infringir los derechos de autor.
+            <br><br>
+            Todo el contenido audiovisual, incluyendo imágenes, videos y música, es propiedad de Avenged Sevenfold y de su respectiva disquera, Warner Records. Todos los derechos están reservados a sus legítimos propietarios. 
+            <br><br>
+            © Avenged Sevenfold, Warner Records. Todos los derechos reservados.
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+
+
+</html>
