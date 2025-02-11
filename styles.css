@@ -1,4 +1,6 @@
 body {
+    height: auto;
+    overflow-y: auto;
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: black;
@@ -47,8 +49,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
@@ -85,13 +87,15 @@ h2 {
 }
 
 .gif-container {
-    margin-top: 20px;
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    background: black;
+    padding: 10px;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
 }
 
 .countdown-gif {
@@ -101,13 +105,14 @@ h2 {
 }
 
 footer {
-    background-color: rgba(34, 34, 34, 0.8);
-    color: red;
     text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    color: rgb(255, 0, 0);
+    position: relative;
     width: 100%;
+    bottom: 0;
+    clear: both; /* Asegura que el footer se mantenga debajo de todo */
 }
 
 .disclaimer {
@@ -121,3 +126,29 @@ footer {
     transition: opacity 0.5s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    #countdown div {
+        font-size: 1.5rem;
+    }
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    .disclaimer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #countdown div {
+        font-size: 1.2rem;
+    }
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    .gif-container {
+        max-height: 250px;
+    }
+}
